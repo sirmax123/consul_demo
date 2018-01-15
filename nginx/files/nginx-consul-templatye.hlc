@@ -1,0 +1,14 @@
+consul {
+  address = "127.0.0.1:8500"
+}
+
+exec {
+  command = "/usr/sbin/nginx  -c /etc/nginx//nginx.conf -g \"daemon off;\""
+  reload_signal = "SIGHUP"
+}
+
+template {
+  source = "/php-fpm.conf.ctpl"
+  destination = "/etc/nginx/conf.d/php-fpm.conf"
+  command = "/bin/bash -c '/bin/kill -HUP $(cat /var/run/nginx.pid)||true'"
+}

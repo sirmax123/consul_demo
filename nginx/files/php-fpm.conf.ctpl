@@ -1,0 +1,6 @@
+upstream php_fpm {
+{{- range service "php-fpm" }}
+    server {{ .Address }}:{{ .Port }};
+{{- end }}
+    server 127.0.0.1:9000 backup;
+}

@@ -8,5 +8,7 @@ COPY files/etc/php/7.1/fpm/php-fpm.conf            /etc/php/7.1/fpm/php-fpm.conf
 COPY files/check_php_fpm.sh                        /check_php_fpm.sh
 COPY files/i.php                                   /i.php
 
+RUN mkdir -p /etc/consul/consul.d
+COPY files/etc/consul/consul.d/php-fpm.json        /etc/consul/consul.d/php-fpm.json
 
 CMD ["/start.sh"]

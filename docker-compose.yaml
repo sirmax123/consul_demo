@@ -20,8 +20,8 @@ services:
     php-fpm:
         hostname: php-fpm
         build: php-fpm
-        ports:
-            - "9000:9000"
+#        ports:
+#            - "9000:9000"
         links:
             - consul-server
 

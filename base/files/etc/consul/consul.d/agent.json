@@ -1,0 +1,6 @@
+{
+    "bind_addr": "0.0.0.0",
+    "client_addr": "127.0.0.1",
+    "datacenter": "dc1",
+    "retry_join": ["consul-server"]
+}

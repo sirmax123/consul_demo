@@ -1,0 +1,22 @@
+{
+    "disable_remote_exec": true,
+    "disable_update_check": true,
+    "leave_on_terminate": false,
+    "performance": {
+        "raft_multiplier": 1
+    },
+    "ports": {
+        "dns": 8600,
+        "http": 8500,
+        "https": -1,
+        "server": 8300
+    },
+    "log_level": "debug",
+    "bind_addr": "0.0.0.0",
+    "client_addr": "0.0.0.0",
+    "bootstrap_expect": 1,
+    "datacenter": "dc1",
+    "acl_datacenter": "dc1",
+    "acl_default_policy": "allow",
+    "raft_protocol": 3
+}

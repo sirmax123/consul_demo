@@ -1,0 +1,14 @@
+{
+    "service": {
+        "name": "nginx",
+        "port": 80,
+        "checks": [
+            {
+                "notes": "Service is healthy when returns http 200 on port 80",
+                "http": "http://127.0.0.1:80",
+                "interval": "5s",
+                "timeout": "2s"
+            }
+        ]
+    }
+}

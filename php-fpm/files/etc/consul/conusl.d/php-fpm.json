@@ -1,0 +1,15 @@
+{
+    "service": {
+        "name": "php-fpm",
+        "port": 9000,
+        "checks": [
+            {
+                "notes": "Service is healthy ",
+                "script": "/check_php_fpm.sh",
+                "interval": "15s",
+                "timeout": "2s"
+            }
+        ]
+    }
+}
+
